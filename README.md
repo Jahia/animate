@@ -1,5 +1,11 @@
 # animate
 
+[![Jahia](https://img.shields.io/badge/Jahia-8.2.0%2B-blue)](https://www.jahia.com)
+[![Java](https://img.shields.io/badge/Java-11%2B-orange)](https://adoptium.net)
+[![animate.css](https://img.shields.io/badge/animate.css-4.1.1-blueviolet)](https://animate.style)
+[![WCAG 2.1 AA](https://img.shields.io/badge/WCAG-2.1%20AA-brightgreen)](https://www.w3.org/TR/WCAG21/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE.txt)
+
 A [Jahia](https://www.jahia.com) community module that adds scroll-triggered CSS animations to any content node via the `jmix:animate` mixin. Powered by [animate.css 4.1.1](https://animate.style/).
 
 ## Features
@@ -214,6 +220,42 @@ This module uses the Maven Release Plugin with the `@{project.version}` tag name
 ```bash
 mvn release:prepare release:perform
 ```
+
+## Changelog
+
+### 2.0.0 — 2025
+
+> **Requires full reinstall when upgrading from 1.x** — see [Upgrading from 1.x](#upgrading-from-1x).
+
+- **animate.css 4.1.1** — upgraded from 3.7.2; CSS now fetched via npm and minified at build time (no bundled source)
+- **New animations** — `backIn*`, `backOut*`, `fadeInBottomLeft/Right/TopLeft/TopRight`, `fadeOutBottomLeft/Right/TopLeft/TopRight`, `headShake`, `heartBeat`, `lightSpeedInLeft/Right`, `lightSpeedOutLeft/Right`, `shakeX`, `shakeY`; removed renamed aliases (`lightSpeedIn`, `lightSpeedOut`, `shake`)
+- **OSGi Declarative Services** — migrated from Spring XML (`animate.xml`) to `@Component`/`@Activate` annotations
+- **IntersectionObserver** — replaced `jquery.appear` plugin; zero jQuery dependency
+- **WCAG 2.1 AA** — initial `inert` + `aria-hidden` + `visibility:hidden` state; `prefers-reduced-motion` support; pause/resume button for looping animations (SC 2.2.2); exit-animation focus management (SC 2.4.3); XSS allowlist for class name injection (SC 4.1.1)
+- **groupId** changed from `org.jahia.modules` to `org.jahia.community`
+- **Parent POM** updated to Jahia 8.2.0.0
+- **MIT license** added
+- **Cypress test suite** added (`tests/`) with 8 specs
+
+### 1.8.3
+
+- Add dependency on skins module; ensure jQuery is loaded before script execution
+
+### 1.8.2
+
+- Animate any `jnt:content` node (previously restricted to a subset of types)
+
+### 1.8.1
+
+- Fix module signature issue
+
+### 1.8.0
+
+- Jahia 8.x compatibility
+
+### 1.7.1
+
+- Fix element IDs starting with a number
 
 ## License
 
