@@ -13,7 +13,7 @@
   </parent>
   <groupId>org.jahia.community</groupId>
   <artifactId>animate</artifactId>
-  <version>2.0.0</version>
+  <version>2.0.1-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>animate</name>
   <description>This module allow fun CSS animations on your page.</description>
@@ -21,7 +21,7 @@
     <connection>scm:git:git@github.com:pvollenweider/animate.git</connection>
     <developerConnection>scm:git:git@github.com:pvollenweider/animate.git</developerConnection>
     <url>https://github.com/pvollenweider/animate</url>
-    <tag>2.0.0</tag>
+    <tag>HEAD</tag>
   </scm>
   <properties>
     <jahia-depends>default,jquery,skins</jahia-depends>
