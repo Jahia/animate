@@ -1,15 +1,12 @@
 <jnt = 'http://www.jahia.org/jahia/nt/1.0'>
 <jmix = 'http://www.jahia.org/jahia/mix/1.0'>
-<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
 <j = 'http://www.jahia.org/jahia/1.0'>
 
 [jmix:animate] mixin
  extends = jnt:content
  itemtype = layout
- - j:animation (string, choicelist[resourceBundle]) = 'fadeIn' indexed=no autocreated < 'bounce','flash','pulse','rubberBand','shake','swing','tada','wobble','jello','bounceIn','bounceInDown','bounceInLeft','bounceInRight','bounceInUp','bounceOut','bounceOutDown','bounceOutLeft','bounceOutRight','bounceOutUp','fadeIn','fadeInDown','fadeInDownBig','fadeInLeft','fadeInLeftBig','fadeInRight','fadeInRightBig','fadeInUp','fadeInUpBig','fadeOut','fadeOutDown','fadeOutDownBig','fadeOutLeft','fadeOutLeftBig','fadeOutRight','fadeOutRightBig','fadeOutUp','fadeOutUpBig','flip','flipInX','flipInY','flipOutX','flipOutY','lightSpeedIn','lightSpeedOut','rotateIn','rotateInDownLeft','rotateInDownRight','rotateInUpLeft','rotateInUpRight','rotateOut','rotateOutDownLeft','rotateOutDownRight','rotateOutUpLeft','rotateOutUpRight','slideInUp','slideInDown','slideInLeft','slideInRight','slideOutUp','slideOutDown','slideOutLeft','slideOutRight','zoomIn','zoomInDown','zoomInLeft','zoomInRight','zoomInUp','zoomOut','zoomOutDown','zoomOutLeft','zoomOutRight','zoomOutUp','hinge','jackInTheBox','rollIn','rollOut'
+ - j:animation (string, choicelist[resourceBundle]) = 'fadeIn' indexed=no autocreated < 'bounce','flash','headShake','heartBeat','jello','pulse','rubberBand','shakeX','shakeY','swing','tada','wobble','backInDown','backInLeft','backInRight','backInUp','bounceIn','bounceInDown','bounceInLeft','bounceInRight','bounceInUp','fadeIn','fadeInBottomLeft','fadeInBottomRight','fadeInDown','fadeInDownBig','fadeInLeft','fadeInLeftBig','fadeInRight','fadeInRightBig','fadeInTopLeft','fadeInTopRight','fadeInUp','fadeInUpBig','flipInX','flipInY','jackInTheBox','lightSpeedInLeft','lightSpeedInRight','rollIn','rotateIn','rotateInDownLeft','rotateInDownRight','rotateInUpLeft','rotateInUpRight','slideInDown','slideInLeft','slideInRight','slideInUp','zoomIn','zoomInDown','zoomInLeft','zoomInRight','zoomInUp','backOutDown','backOutLeft','backOutRight','backOutUp','bounceOut','bounceOutDown','bounceOutLeft','bounceOutRight','bounceOutUp','fadeOut','fadeOutBottomLeft','fadeOutBottomRight','fadeOutDown','fadeOutDownBig','fadeOutLeft','fadeOutLeftBig','fadeOutRight','fadeOutRightBig','fadeOutTopLeft','fadeOutTopRight','fadeOutUp','fadeOutUpBig','flip','flipOutX','flipOutY','hinge','lightSpeedOutLeft','lightSpeedOutRight','rollOut','rotateOut','rotateOutDownLeft','rotateOutDownRight','rotateOutUpLeft','rotateOutUpRight','slideOutDown','slideOutLeft','slideOutRight','slideOutUp','zoomOut','zoomOutDown','zoomOutLeft','zoomOutRight','zoomOutUp'
  - j:animationDelay (double) = 0
  - j:animationDuration (double)
  - j:animationIterationCount (string,choicelist[resourceBundle]) = '1' < '1','2','3','infinite'
  - j:animationDelayUsage (string, choicelist[resourceBundle]) = 'delayBeforeAnimation' indexed=no autocreated < 'delayBeforeAnimation','delayBeforeDisplay'
-
-

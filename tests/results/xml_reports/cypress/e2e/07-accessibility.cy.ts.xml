@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="24.055" tests="11" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-05-21T11:55:12" tests="0" file="cypress/e2e/07-accessibility.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Animate — Accessibility (WCAG 2.1 AA)" timestamp="2026-05-21T11:55:12" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Initial hidden state (before reveal)" timestamp="2026-05-21T11:55:12" tests="3" time="0.246" failures="0">
+    <testcase name="Animate — Accessibility (WCAG 2.1 AA) Initial hidden state (before reveal) wrapper starts with inert attribute (suppresses keyboard focus)" time="0.080" classname="wrapper starts with inert attribute (suppresses keyboard focus)">
+    </testcase>
+    <testcase name="Animate — Accessibility (WCAG 2.1 AA) Initial hidden state (before reveal) wrapper starts with aria-hidden=&quot;true&quot;" time="0.048" classname="wrapper starts with aria-hidden=&quot;true&quot;">
+    </testcase>
+    <testcase name="Animate — Accessibility (WCAG 2.1 AA) Initial hidden state (before reveal) wrapper starts with visibility:hidden" time="0.057" classname="wrapper starts with visibility:hidden">
+    </testcase>
+  </testsuite>
+  <testsuite name="Revealed state (after IntersectionObserver fires)" timestamp="2026-05-21T11:55:12" tests="3" time="5.564" failures="0">
+    <testcase name="Animate — Accessibility (WCAG 2.1 AA) Revealed state (after IntersectionObserver fires) inert attribute absent after reveal" time="5.289" classname="inert attribute absent after reveal">
+    </testcase>
+    <testcase name="Animate — Accessibility (WCAG 2.1 AA) Revealed state (after IntersectionObserver fires) aria-hidden absent after reveal" time="0.095" classname="aria-hidden absent after reveal">
+    </testcase>
+    <testcase name="Animate — Accessibility (WCAG 2.1 AA) Revealed state (after IntersectionObserver fires) element is visible and reachable by keyboard after reveal" time="0.103" classname="element is visible and reachable by keyboard after reveal">
+    </testcase>
+  </testsuite>
+  <testsuite name="Pause button — WCAG 2.2.2 SC (looping animation)" timestamp="2026-05-21T11:55:18" tests="3" time="8.654" failures="0">
+    <testcase name="Animate — Accessibility (WCAG 2.1 AA) Pause button — WCAG 2.2.2 SC (looping animation) pause button is keyboard focusable (is a native button)" time="5.251" classname="pause button is keyboard focusable (is a native button)">
+    </testcase>
+    <testcase name="Animate — Accessibility (WCAG 2.1 AA) Pause button — WCAG 2.2.2 SC (looping animation) pause button has aria-pressed attribute" time="0.044" classname="pause button has aria-pressed attribute">
+    </testcase>
+    <testcase name="Animate — Accessibility (WCAG 2.1 AA) Pause button — WCAG 2.2.2 SC (looping animation) pause button label is meaningful (&quot;Pause animation&quot;)" time="0.127" classname="pause button label is meaningful (&quot;Pause animation&quot;)">
+    </testcase>
+  </testsuite>
+  <testsuite name="Exit animation — WCAG 2.4.3 (focus management)" timestamp="2026-05-21T11:55:26" tests="2" time="9.587" failures="0">
+    <testcase name="Animate — Accessibility (WCAG 2.1 AA) Exit animation — WCAG 2.4.3 (focus management) element has aria-hidden=&quot;true&quot; after exit animation ends" time="5.251" classname="element has aria-hidden=&quot;true&quot; after exit animation ends">
+    </testcase>
+    <testcase name="Animate — Accessibility (WCAG 2.1 AA) Exit animation — WCAG 2.4.3 (focus management) element is hidden (display:none) after exit animation ends" time="1.079" classname="element is hidden (display:none) after exit animation ends">
+    </testcase>
+  </testsuite>
+</testsuites>

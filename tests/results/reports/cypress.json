@@ -1,0 +1,150 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-05-21T11:34:57.021Z",
+    "end": "2026-05-21T11:34:57.421Z",
+    "duration": 400,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "b4354787-70fb-4562-a1df-2429ed249338",
+      "title": "",
+      "fullFile": "cypress/e2e/01-setup.cy.ts",
+      "file": "cypress/e2e/01-setup.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "04c799a2-5f35-4500-9b41-f19a5bf15e57",
+          "title": "Animate — Setup",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "animate module is deployed and started",
+              "fullTitle": "Animate — Setup animate module is deployed and started",
+              "timedOut": null,
+              "duration": 363,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.apollo({\n    queryFile: 'graphql/jcr/query/getStartedModulesVersion.graphql'\n}).then(function (resp) {\n    var _a, _b, _c;\n    var modules = (_c = (_b = (_a = resp === null || resp === void 0 ? void 0 : resp.data) === null || _a === void 0 ? void 0 : _a.dashboard) === null || _b === void 0 ? void 0 : _b.modules) !== null && _c !== void 0 ? _c : [];\n    var animate = modules.find(function (m) { return m.id === 'animate'; });\n    expect(animate, 'animate module not found — deploy the OSGi bundle first').to.exist;\n});",
+              "err": {
+                "message": "AssertionError: Login result: expected 200 to equal 302\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Animate — Setup`",
+                "estack": "AssertionError: Login result: expected 200 to equal 302\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Animate — Setup`\n    at Context.eval (webpack://animate-cypress/./node_modules/@jahia/cypress/dist/support/login.js:40:0)",
+                "diff": "- '200'\n+ '302'\n"
+              },
+              "uuid": "bdc7b4c2-0032-40e0-921c-20e9a2077475",
+              "parentUUID": "04c799a2-5f35-4500-9b41-f19a5bf15e57",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test-page is accessible in live mode",
+              "fullTitle": "Animate — Setup test-page is accessible in live mode",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({ url: (0, animate_1.pageUrl)('test-page'), failOnStatusCode: false })\n    .its('status').should('eq', 200);",
+              "err": {},
+              "uuid": "c7e1a11a-a6f8-4caa-b201-688c2d307a3c",
+              "parentUUID": "04c799a2-5f35-4500-9b41-f19a5bf15e57",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "rendered page contains a <body> element",
+              "fullTitle": "Animate — Setup rendered page contains a <body> element",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request((0, animate_1.pageUrl)('test-page')).its('body').should('contain', '</body>');",
+              "err": {},
+              "uuid": "933fe924-aeaa-4a84-a077-0ad3167c54fb",
+              "parentUUID": "04c799a2-5f35-4500-9b41-f19a5bf15e57",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "bdc7b4c2-0032-40e0-921c-20e9a2077475"
+          ],
+          "pending": [],
+          "skipped": [
+            "c7e1a11a-a6f8-4caa-b201-688c2d307a3c",
+            "933fe924-aeaa-4a84-a077-0ad3167c54fb"
+          ],
+          "duration": 363,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "cypress",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "./results/reports/",
+        "reportFilename": "cypress",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

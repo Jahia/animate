@@ -1,0 +1,288 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-05-21T11:35:05.937Z",
+    "end": "2026-05-21T11:35:06.399Z",
+    "duration": 462,
+    "testsRegistered": 8,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 6,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "5a309d83-0423-4278-a79a-ac5f47e6107f",
+      "title": "",
+      "fullFile": "cypress/e2e/04-animation-iteration.cy.ts",
+      "file": "cypress/e2e/04-animation-iteration.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2621cb01-f491-454c-86a7-23e0929a1a6a",
+          "title": "Animate — Iteration count",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "b6d70a7a-9ace-4f82-b672-55e67626945e",
+              "title": "infinite loop",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "wrapper has position:relative for pause button positioning",
+                  "fullTitle": "Animate — Iteration count infinite loop wrapper has position:relative for pause button positioning",
+                  "timedOut": null,
+                  "duration": 155,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]').invoke('css', 'position').should('eq', 'relative');",
+                  "err": {
+                    "message": "AssertionError: Login result: expected 200 to equal 302\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `infinite loop`",
+                    "estack": "AssertionError: Login result: expected 200 to equal 302\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `infinite loop`\n    at Context.eval (webpack://animate-cypress/./node_modules/@jahia/cypress/dist/support/login.js:40:0)",
+                    "diff": "- '200'\n+ '302'\n"
+                  },
+                  "uuid": "f3851ed0-41ef-4281-b96d-649eca825857",
+                  "parentUUID": "b6d70a7a-9ace-4f82-b672-55e67626945e",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "pause button is present and visible",
+                  "fullTitle": "Animate — Iteration count infinite loop pause button is present and visible",
+                  "timedOut": null,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-pause-\"]', { timeout: 3000 }).should('be.visible');",
+                  "err": {},
+                  "uuid": "ac2c54de-3ef3-43be-9740-4c83843538d0",
+                  "parentUUID": "b6d70a7a-9ace-4f82-b672-55e67626945e",
+                  "isHook": false,
+                  "skipped": true
+                },
+                {
+                  "title": "pause button initial state: aria-pressed false, text \"Pause animation\"",
+                  "fullTitle": "Animate — Iteration count infinite loop pause button initial state: aria-pressed false, text \"Pause animation\"",
+                  "timedOut": null,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-pause-\"]', { timeout: 3000 })\n    .should('have.attr', 'aria-pressed', 'false')\n    .and('contain.text', 'Pause animation');",
+                  "err": {},
+                  "uuid": "891b5bff-cc60-4ff5-beca-d46a83984dfb",
+                  "parentUUID": "b6d70a7a-9ace-4f82-b672-55e67626945e",
+                  "isHook": false,
+                  "skipped": true
+                },
+                {
+                  "title": "clicking pause button pauses the animation",
+                  "fullTitle": "Animate — Iteration count infinite loop clicking pause button pauses the animation",
+                  "timedOut": null,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-pause-\"]', { timeout: 3000 }).click();\ncy.get('[id^=\"animate-\"]').invoke('css', 'animation-play-state').should('eq', 'paused');",
+                  "err": {},
+                  "uuid": "77a14501-61ed-4e22-9960-e56521686899",
+                  "parentUUID": "b6d70a7a-9ace-4f82-b672-55e67626945e",
+                  "isHook": false,
+                  "skipped": true
+                },
+                {
+                  "title": "pause button updates aria-pressed to true after pause",
+                  "fullTitle": "Animate — Iteration count infinite loop pause button updates aria-pressed to true after pause",
+                  "timedOut": null,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-pause-\"]', { timeout: 3000 }).click();\ncy.get('[id^=\"animate-pause-\"]').should('have.attr', 'aria-pressed', 'true');",
+                  "err": {},
+                  "uuid": "0bc83057-9d86-4f16-82bc-ec5f6ac52fd8",
+                  "parentUUID": "b6d70a7a-9ace-4f82-b672-55e67626945e",
+                  "isHook": false,
+                  "skipped": true
+                },
+                {
+                  "title": "pause button text changes to \"Resume animation\" after pause",
+                  "fullTitle": "Animate — Iteration count infinite loop pause button text changes to \"Resume animation\" after pause",
+                  "timedOut": null,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-pause-\"]', { timeout: 3000 }).click();\ncy.get('[id^=\"animate-pause-\"]').should('contain.text', 'Resume animation');",
+                  "err": {},
+                  "uuid": "f6358b68-ded6-4087-9d5d-06ec013f96eb",
+                  "parentUUID": "b6d70a7a-9ace-4f82-b672-55e67626945e",
+                  "isHook": false,
+                  "skipped": true
+                },
+                {
+                  "title": "clicking resume restores animation play state",
+                  "fullTitle": "Animate — Iteration count infinite loop clicking resume restores animation play state",
+                  "timedOut": null,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-pause-\"]', { timeout: 3000 }).click();\ncy.get('[id^=\"animate-pause-\"]').click();\ncy.get('[id^=\"animate-\"]').invoke('css', 'animation-play-state').should('eq', 'running');\ncy.get('[id^=\"animate-pause-\"]').should('have.attr', 'aria-pressed', 'false');\ncy.get('[id^=\"animate-pause-\"]').should('contain.text', 'Pause animation');",
+                  "err": {},
+                  "uuid": "d84b90e4-9354-4a35-879e-26bb53e710f7",
+                  "parentUUID": "b6d70a7a-9ace-4f82-b672-55e67626945e",
+                  "isHook": false,
+                  "skipped": true
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "f3851ed0-41ef-4281-b96d-649eca825857"
+              ],
+              "pending": [],
+              "skipped": [
+                "ac2c54de-3ef3-43be-9740-4c83843538d0",
+                "891b5bff-cc60-4ff5-beca-d46a83984dfb",
+                "77a14501-61ed-4e22-9960-e56521686899",
+                "0bc83057-9d86-4f16-82bc-ec5f6ac52fd8",
+                "f6358b68-ded6-4087-9d5d-06ec013f96eb",
+                "d84b90e4-9354-4a35-879e-26bb53e710f7"
+              ],
+              "duration": 155,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "eebb0550-4aea-47f7-bfc8-a13a5915bb96",
+              "title": "iteration count = 1 (default)",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "pause button is absent when not looping",
+                  "fullTitle": "Animate — Iteration count iteration count = 1 (default) pause button is absent when not looping",
+                  "timedOut": null,
+                  "duration": 115,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.wait(500);\ncy.get('[id^=\"animate-pause-\"]').should('not.exist');",
+                  "err": {
+                    "message": "AssertionError: Login result: expected 200 to equal 302\n\nBecause this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Animate — Iteration count`",
+                    "estack": "AssertionError: Login result: expected 200 to equal 302\n\nBecause this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Animate — Iteration count`\n    at Context.eval (webpack://animate-cypress/./node_modules/@jahia/cypress/dist/support/login.js:40:0)",
+                    "diff": "- '200'\n+ '302'\n"
+                  },
+                  "uuid": "dfba3c79-dbac-4576-a189-bea95e5a6a21",
+                  "parentUUID": "eebb0550-4aea-47f7-bfc8-a13a5915bb96",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "dfba3c79-dbac-4576-a189-bea95e5a6a21"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 115,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "cypress",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "./results/reports/",
+        "reportFilename": "cypress",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

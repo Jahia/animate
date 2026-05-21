@@ -1,0 +1,16 @@
+mutation setAnimateProperties(
+    $pathOrId: String!
+    $animation: String!
+    $animationDelay: String!
+    $animationIterationCount: String!
+    $animationDelayUsage: String!
+) {
+    jcr(workspace: EDIT) {
+        mutateNode(pathOrId: $pathOrId) {
+            animation: mutateProperty(name: "j:animation") { setValue(value: $animation) }
+            delay: mutateProperty(name: "j:animationDelay") { setValue(value: $animationDelay) }
+            iterCount: mutateProperty(name: "j:animationIterationCount") { setValue(value: $animationIterationCount) }
+            delayUsage: mutateProperty(name: "j:animationDelayUsage") { setValue(value: $animationDelayUsage) }
+        }
+    }
+}

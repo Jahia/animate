@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-21T11:55:05.310Z",
+    "end": "2026-05-21T11:55:09.580Z",
+    "duration": 4270,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "06abda0b-425d-4cbb-b6ac-a595e5e4f8c0",
+      "title": "",
+      "fullFile": "cypress/e2e/06-edit-mode.cy.ts",
+      "file": "cypress/e2e/06-edit-mode.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "33d4f604-23e8-492b-bb6d-0f73800cff89",
+          "title": "Animate — Edit mode (no animation)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "wrapper div exists in edit mode",
+              "fullTitle": "Animate — Edit mode (no animation) wrapper div exists in edit mode",
+              "timedOut": null,
+              "duration": 3369,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\ncy.visit((0, animate_1.editFrameUrl)('test-page'));\ncy.get('[id^=\"animate-\"]').should('exist');",
+              "err": {},
+              "uuid": "c96b2ea9-ac90-40bf-9660-d688d3d690d7",
+              "parentUUID": "33d4f604-23e8-492b-bb6d-0f73800cff89",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "no animate.min.css link in edit mode",
+              "fullTitle": "Animate — Edit mode (no animation) no animate.min.css link in edit mode",
+              "timedOut": null,
+              "duration": 73,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\ncy.visit((0, animate_1.editFrameUrl)('test-page'));\ncy.get('link[href*=\"animate.min.css\"]').should('not.exist');",
+              "err": {},
+              "uuid": "f8122d6b-17bc-4b1c-8a90-251accfc156f",
+              "parentUUID": "33d4f604-23e8-492b-bb6d-0f73800cff89",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "wrapper has no inert attribute in edit mode",
+              "fullTitle": "Animate — Edit mode (no animation) wrapper has no inert attribute in edit mode",
+              "timedOut": null,
+              "duration": 65,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\ncy.visit((0, animate_1.editFrameUrl)('test-page'));\ncy.get('[id^=\"animate-\"]').should('not.have.attr', 'inert');",
+              "err": {},
+              "uuid": "99b5d25c-f571-4b4d-a13b-6e3685c08855",
+              "parentUUID": "33d4f604-23e8-492b-bb6d-0f73800cff89",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "wrapper has no opacity:0 in edit mode (always visible)",
+              "fullTitle": "Animate — Edit mode (no animation) wrapper has no opacity:0 in edit mode (always visible)",
+              "timedOut": null,
+              "duration": 74,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\ncy.visit((0, animate_1.editFrameUrl)('test-page'));\ncy.get('[id^=\"animate-\"]').invoke('css', 'opacity').should('not.eq', '0');",
+              "err": {},
+              "uuid": "80558aae-cf79-4641-91b3-0766814e0275",
+              "parentUUID": "33d4f604-23e8-492b-bb6d-0f73800cff89",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "no animation script injected in edit mode",
+              "fullTitle": "Animate — Edit mode (no animation) no animation script injected in edit mode",
+              "timedOut": null,
+              "duration": 569,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\ncy.visit((0, animate_1.editFrameUrl)('test-page'));\ncy.wait(500);\ncy.get('[id^=\"animate-\"]').should('not.have.class', 'animated');",
+              "err": {},
+              "uuid": "ee3a9f14-4672-48d7-aa6e-8400553d28d8",
+              "parentUUID": "33d4f604-23e8-492b-bb6d-0f73800cff89",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c96b2ea9-ac90-40bf-9660-d688d3d690d7",
+            "f8122d6b-17bc-4b1c-8a90-251accfc156f",
+            "99b5d25c-f571-4b4d-a13b-6e3685c08855",
+            "80558aae-cf79-4641-91b3-0766814e0275",
+            "ee3a9f14-4672-48d7-aa6e-8400553d28d8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4150,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "cypress",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "./results/reports/",
+        "reportFilename": "cypress",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

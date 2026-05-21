@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="4.270" tests="5" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-05-21T11:55:05" tests="0" file="cypress/e2e/06-edit-mode.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Animate — Edit mode (no animation)" timestamp="2026-05-21T11:55:05" tests="5" time="4.265" failures="0">
+    <testcase name="Animate — Edit mode (no animation) wrapper div exists in edit mode" time="3.369" classname="wrapper div exists in edit mode">
+    </testcase>
+    <testcase name="Animate — Edit mode (no animation) no animate.min.css link in edit mode" time="0.073" classname="no animate.min.css link in edit mode">
+    </testcase>
+    <testcase name="Animate — Edit mode (no animation) wrapper has no inert attribute in edit mode" time="0.065" classname="wrapper has no inert attribute in edit mode">
+    </testcase>
+    <testcase name="Animate — Edit mode (no animation) wrapper has no opacity:0 in edit mode (always visible)" time="0.074" classname="wrapper has no opacity:0 in edit mode (always visible)">
+    </testcase>
+    <testcase name="Animate — Edit mode (no animation) no animation script injected in edit mode" time="0.569" classname="no animation script injected in edit mode">
+    </testcase>
+  </testsuite>
+</testsuites>

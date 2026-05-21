@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="15.701" tests="4" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-05-21T11:54:18" tests="0" file="cypress/e2e/03-animation-delay.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Animate — Delay modes" timestamp="2026-05-21T11:54:18" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="delayBeforeAnimation — CSS animationDelay applied" timestamp="2026-05-21T11:54:18" tests="2" time="6.564" failures="0">
+    <testcase name="Animate — Delay modes delayBeforeAnimation — CSS animationDelay applied element reveals immediately (not after delay)" time="6.426" classname="element reveals immediately (not after delay)">
+    </testcase>
+    <testcase name="Animate — Delay modes delayBeforeAnimation — CSS animationDelay applied CSS animationDelay property is set on the element" time="0.080" classname="CSS animationDelay property is set on the element">
+    </testcase>
+  </testsuite>
+  <testsuite name="delayBeforeDisplay — setTimeout before reveal" timestamp="2026-05-21T11:54:25" tests="2" time="9.123" failures="0">
+    <testcase name="Animate — Delay modes delayBeforeDisplay — setTimeout before reveal element is hidden immediately after load" time="5.277" classname="element is hidden immediately after load">
+    </testcase>
+    <testcase name="Animate — Delay modes delayBeforeDisplay — setTimeout before reveal element becomes visible after delay" time="0.608" classname="element becomes visible after delay">
+    </testcase>
+  </testsuite>
+</testsuites>

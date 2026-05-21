@@ -1,0 +1,203 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-21T11:54:18.780Z",
+    "end": "2026-05-21T11:54:34.481Z",
+    "duration": 15701,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "41211ca8-ce9f-4db6-b8d9-a41e8be0876d",
+      "title": "",
+      "fullFile": "cypress/e2e/03-animation-delay.cy.ts",
+      "file": "cypress/e2e/03-animation-delay.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ab1f15c8-a05e-424c-b230-1979349174d5",
+          "title": "Animate — Delay modes",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "9330a6ae-bfa6-4268-a396-a4b3aae60595",
+              "title": "delayBeforeAnimation — CSS animationDelay applied",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "element reveals immediately (not after delay)",
+                  "fullTitle": "Animate — Delay modes delayBeforeAnimation — CSS animationDelay applied element reveals immediately (not after delay)",
+                  "timedOut": null,
+                  "duration": 6426,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\n// element should be visible without waiting for delay\ncy.get('[id^=\"animate-\"]', { timeout: 3000 }).should('be.visible');",
+                  "err": {},
+                  "uuid": "21ff2b04-bb70-4dee-98bf-093fd6c2d04f",
+                  "parentUUID": "9330a6ae-bfa6-4268-a396-a4b3aae60595",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "CSS animationDelay property is set on the element",
+                  "fullTitle": "Animate — Delay modes delayBeforeAnimation — CSS animationDelay applied CSS animationDelay property is set on the element",
+                  "timedOut": null,
+                  "duration": 80,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]', { timeout: 3000 })\n    .should('have.css', 'animation-delay')\n    .and('match', /^[0-9.]+s$/);",
+                  "err": {},
+                  "uuid": "311cb01f-6438-42c3-9336-7cc1d51c344e",
+                  "parentUUID": "9330a6ae-bfa6-4268-a396-a4b3aae60595",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "21ff2b04-bb70-4dee-98bf-093fd6c2d04f",
+                "311cb01f-6438-42c3-9336-7cc1d51c344e"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 6506,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "16fb4d88-bb5f-4bc7-80f4-f7d9a6c505b3",
+              "title": "delayBeforeDisplay — setTimeout before reveal",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "element is hidden immediately after load",
+                  "fullTitle": "Animate — Delay modes delayBeforeDisplay — setTimeout before reveal element is hidden immediately after load",
+                  "timedOut": null,
+                  "duration": 5277,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\n// check immediately — before the 500ms setTimeout fires\ncy.get('[id^=\"animate-\"]').invoke('css', 'opacity').should('eq', '0');",
+                  "err": {},
+                  "uuid": "c113ba9b-81b1-46ae-8b37-245f88a9d383",
+                  "parentUUID": "16fb4d88-bb5f-4bc7-80f4-f7d9a6c505b3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "element becomes visible after delay",
+                  "fullTitle": "Animate — Delay modes delayBeforeDisplay — setTimeout before reveal element becomes visible after delay",
+                  "timedOut": null,
+                  "duration": 608,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]', { timeout: 3000 }).should('be.visible');",
+                  "err": {},
+                  "uuid": "51c35398-f4d0-4aca-8c95-0a9c85aeebdb",
+                  "parentUUID": "16fb4d88-bb5f-4bc7-80f4-f7d9a6c505b3",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "c113ba9b-81b1-46ae-8b37-245f88a9d383",
+                "51c35398-f4d0-4aca-8c95-0a9c85aeebdb"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 5885,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "cypress",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "./results/reports/",
+        "reportFilename": "cypress",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

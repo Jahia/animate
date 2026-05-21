@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="15.332" tests="8" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-05-21T11:54:37" tests="0" file="cypress/e2e/04-animation-iteration.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Animate — Iteration count" timestamp="2026-05-21T11:54:37" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="infinite loop" timestamp="2026-05-21T11:54:37" tests="7" time="6.331" failures="0">
+    <testcase name="Animate — Iteration count infinite loop wrapper has position:relative for pause button positioning" time="5.318" classname="wrapper has position:relative for pause button positioning">
+    </testcase>
+    <testcase name="Animate — Iteration count infinite loop pause button is present and visible" time="0.123" classname="pause button is present and visible">
+    </testcase>
+    <testcase name="Animate — Iteration count infinite loop pause button initial state: aria-pressed false, text &quot;Pause animation&quot;" time="0.054" classname="pause button initial state: aria-pressed false, text &quot;Pause animation&quot;">
+    </testcase>
+    <testcase name="Animate — Iteration count infinite loop clicking pause button pauses the animation" time="0.140" classname="clicking pause button pauses the animation">
+    </testcase>
+    <testcase name="Animate — Iteration count infinite loop pause button updates aria-pressed to true after pause" time="0.149" classname="pause button updates aria-pressed to true after pause">
+    </testcase>
+    <testcase name="Animate — Iteration count infinite loop pause button text changes to &quot;Resume animation&quot; after pause" time="0.134" classname="pause button text changes to &quot;Resume animation&quot; after pause">
+    </testcase>
+    <testcase name="Animate — Iteration count infinite loop clicking resume restores animation play state" time="0.208" classname="clicking resume restores animation play state">
+    </testcase>
+  </testsuite>
+  <testsuite name="iteration count = 1 (default)" timestamp="2026-05-21T11:54:43" tests="1" time="8.997" failures="0">
+    <testcase name="Animate — Iteration count iteration count = 1 (default) pause button is absent when not looping" time="5.783" classname="pause button is absent when not looping">
+    </testcase>
+  </testsuite>
+</testsuites>

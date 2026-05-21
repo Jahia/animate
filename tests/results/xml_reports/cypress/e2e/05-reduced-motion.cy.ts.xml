@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="6.672" tests="4" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-05-21T11:54:55" tests="0" file="cypress/e2e/05-reduced-motion.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Animate — Reduced motion (WCAG 2.3.3 / 2.2.2)" timestamp="2026-05-21T11:54:55" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="prefers-reduced-motion: reduce" timestamp="2026-05-21T11:55:00" tests="4" time="1.442" failures="0">
+    <testcase name="Animate — Reduced motion (WCAG 2.3.3 / 2.2.2) prefers-reduced-motion: reduce element is revealed (visible) even with reduced motion" time="5.331" classname="element is revealed (visible) even with reduced motion">
+    </testcase>
+    <testcase name="Animate — Reduced motion (WCAG 2.3.3 / 2.2.2) prefers-reduced-motion: reduce animation class &quot;animated&quot; is NOT added with reduced motion" time="0.590" classname="animation class &quot;animated&quot; is NOT added with reduced motion">
+    </testcase>
+    <testcase name="Animate — Reduced motion (WCAG 2.3.3 / 2.2.2) prefers-reduced-motion: reduce animation class &quot;fadeIn&quot; is NOT added with reduced motion" time="0.557" classname="animation class &quot;fadeIn&quot; is NOT added with reduced motion">
+    </testcase>
+    <testcase name="Animate — Reduced motion (WCAG 2.3.3 / 2.2.2) prefers-reduced-motion: reduce inert attribute removed even with reduced motion" time="0.066" classname="inert attribute removed even with reduced motion">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,245 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-05-21T11:35:00.071Z",
+    "end": "2026-05-21T11:35:00.306Z",
+    "duration": 235,
+    "testsRegistered": 8,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 7,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "07372603-718e-4004-8b20-d97c6f4feaa3",
+      "title": "",
+      "fullFile": "cypress/e2e/02-animation-render.cy.ts",
+      "file": "cypress/e2e/02-animation-render.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "851622c2-477b-4129-8ba9-343284671177",
+          "title": "Animate — Basic render",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "animate.min.css link tag is present",
+              "fullTitle": "Animate — Basic render animate.min.css link tag is present",
+              "timedOut": null,
+              "duration": 201,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('link[href*=\"animate.min.css\"]').should('exist');",
+              "err": {
+                "message": "CypressError: `cy.request()` failed on:\n\nhttp://localhost:8080/modules/api/provisioning\n\nThe response we received from your web server was:\n\n  > 401: Unauthorized\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:8080/modules/api/provisioning\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"content-type\": \"multipart/form-data; boundary=----CypressFormDataBoundary\",\n  \"user-agent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.17.0 Chrome/118.0.5993.159 Electron/27.3.10 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"authorization\": \"Basic cm9vdDpyb290MTIzNA==\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-length\": 1084\n}\nBody: {}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 401 - Unauthorized\nHeaders: {\n  \"cache-control\": \"private, no-cache, no-store, must-revalidate, proxy-revalidate, max-age=0\",\n  \"content-type\": \"text/plain\",\n  \"content-length\": \"77\",\n  \"date\": \"Thu, 21 May 2026 11:35:00 GMT\",\n  \"keep-alive\": \"timeout=60\",\n  \"connection\": \"keep-alive\"\n}\nBody: {}\n\n\nhttps://on.cypress.io/request\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Animate — Basic render`",
+                "estack": "CypressError: `cy.request()` failed on:\n\nhttp://localhost:8080/modules/api/provisioning\n\nThe response we received from your web server was:\n\n  > 401: Unauthorized\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:8080/modules/api/provisioning\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"content-type\": \"multipart/form-data; boundary=----CypressFormDataBoundary\",\n  \"user-agent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.17.0 Chrome/118.0.5993.159 Electron/27.3.10 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"authorization\": \"Basic cm9vdDpyb290MTIzNA==\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-length\": 1084\n}\nBody: {}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 401 - Unauthorized\nHeaders: {\n  \"cache-control\": \"private, no-cache, no-store, must-revalidate, proxy-revalidate, max-age=0\",\n  \"content-type\": \"text/plain\",\n  \"content-length\": \"77\",\n  \"date\": \"Thu, 21 May 2026 11:35:00 GMT\",\n  \"keep-alive\": \"timeout=60\",\n  \"connection\": \"keep-alive\"\n}\nBody: {}\n\n\nhttps://on.cypress.io/request\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Animate — Basic render`\n    at <unknown> (http://localhost:8080/__cypress/runner/cypress_runner.js:132876:72)\n    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (http://localhost:8080/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (http://localhost:8080/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (http://localhost:8080/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (http://localhost:8080/__cypress/runner/cypress_runner.js:1724:18)\n    at _drainQueueStep (http://localhost:8080/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (http://localhost:8080/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (http://localhost:8080/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (http://localhost:8080/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.runProvisioningScript (webpack://animate-cypress/./node_modules/@jahia/cypress/dist/support/provisioning/runProvisioningScript.js:100:0)",
+                "diff": null
+              },
+              "uuid": "995efe55-3175-4182-a702-6c905615cf4a",
+              "parentUUID": "851622c2-477b-4129-8ba9-343284671177",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "animate.min.css resource loads with 200",
+              "fullTitle": "Animate — Basic render animate.min.css resource loads with 200",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('link[href*=\"animate.min.css\"]').invoke('attr', 'href').then(function (href) {\n    cy.request(href).its('status').should('eq', 200);\n});",
+              "err": {},
+              "uuid": "b3a18aac-c002-414b-8342-0cfa47bea7df",
+              "parentUUID": "851622c2-477b-4129-8ba9-343284671177",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "wrapper div with animate- prefix exists in DOM",
+              "fullTitle": "Animate — Basic render wrapper div with animate- prefix exists in DOM",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]').should('exist');",
+              "err": {},
+              "uuid": "ae8c11ad-c0a1-4075-abc2-b3961b773ff9",
+              "parentUUID": "851622c2-477b-4129-8ba9-343284671177",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "wrapper contains the text content",
+              "fullTitle": "Animate — Basic render wrapper contains the text content",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]').should('contain.text', 'Test animation content');",
+              "err": {},
+              "uuid": "5a4f8db2-de68-4f95-8177-7053f79673b6",
+              "parentUUID": "851622c2-477b-4129-8ba9-343284671177",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "animation classes are applied after IntersectionObserver fires",
+              "fullTitle": "Animate — Basic render animation classes are applied after IntersectionObserver fires",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]', { timeout: 5000 }).should('have.class', 'animated');\ncy.get('[id^=\"animate-\"]').should('have.class', 'fadeIn');",
+              "err": {},
+              "uuid": "528c9ea1-6570-4b14-a862-b20bf4f9e7c9",
+              "parentUUID": "851622c2-477b-4129-8ba9-343284671177",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "element is visible after animation reveal",
+              "fullTitle": "Animate — Basic render element is visible after animation reveal",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]', { timeout: 5000 }).should('be.visible');",
+              "err": {},
+              "uuid": "20611b3e-d255-4ab5-aa60-9bd5ab3b8bb7",
+              "parentUUID": "851622c2-477b-4129-8ba9-343284671177",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "inert attribute removed after reveal",
+              "fullTitle": "Animate — Basic render inert attribute removed after reveal",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]', { timeout: 5000 }).should('not.have.attr', 'inert');",
+              "err": {},
+              "uuid": "2edcf597-998e-4df8-b8b6-1a8ae7eb9d65",
+              "parentUUID": "851622c2-477b-4129-8ba9-343284671177",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "aria-hidden attribute removed after reveal",
+              "fullTitle": "Animate — Basic render aria-hidden attribute removed after reveal",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]', { timeout: 5000 }).should('not.have.attr', 'aria-hidden');",
+              "err": {},
+              "uuid": "0d8cf207-cf0d-4378-b9ad-06f141816a89",
+              "parentUUID": "851622c2-477b-4129-8ba9-343284671177",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "995efe55-3175-4182-a702-6c905615cf4a"
+          ],
+          "pending": [],
+          "skipped": [
+            "b3a18aac-c002-414b-8342-0cfa47bea7df",
+            "ae8c11ad-c0a1-4075-abc2-b3961b773ff9",
+            "5a4f8db2-de68-4f95-8177-7053f79673b6",
+            "528c9ea1-6570-4b14-a862-b20bf4f9e7c9",
+            "20611b3e-d255-4ab5-aa60-9bd5ab3b8bb7",
+            "2edcf597-998e-4df8-b8b6-1a8ae7eb9d65",
+            "0d8cf207-cf0d-4378-b9ad-06f141816a89"
+          ],
+          "duration": 201,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "cypress",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "./results/reports/",
+        "reportFilename": "cypress",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

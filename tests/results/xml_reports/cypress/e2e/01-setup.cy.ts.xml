@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="19.851" tests="3" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-05-21T11:53:46" tests="0" file="cypress/e2e/01-setup.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Animate — Setup" timestamp="2026-05-21T11:53:46" tests="3" time="19.848" failures="0">
+    <testcase name="Animate — Setup animate module is deployed and started" time="19.704" classname="animate module is deployed and started">
+    </testcase>
+    <testcase name="Animate — Setup test-page is accessible in live mode" time="0.052" classname="test-page is accessible in live mode">
+    </testcase>
+    <testcase name="Animate — Setup rendered page contains a &lt;body&gt; element" time="0.016" classname="rendered page contains a &lt;body&gt; element">
+    </testcase>
+  </testsuite>
+</testsuites>

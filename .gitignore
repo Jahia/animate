@@ -13,3 +13,8 @@ target
 
 # Jahia DX Studio
 repository.xml.generated
+
+# npm / frontend-maven-plugin
+node/
+node_modules/
+src/main/resources/css/animate.min.css

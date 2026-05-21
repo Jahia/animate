@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="6.083" tests="9" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-05-21T11:54:09" tests="0" file="cypress/e2e/02-animation-render.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Animate — Basic render" timestamp="2026-05-21T11:54:09" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Step 1 — rich text content exists, no jmix:animate mixin yet" timestamp="2026-05-21T11:54:09" tests="1" time="0.063" failures="0">
+    <testcase name="Animate — Basic render Step 1 — rich text content exists, no jmix:animate mixin yet content node renders inside the page body" time="0.044" classname="content node renders inside the page body">
+    </testcase>
+  </testsuite>
+  <testsuite name="Step 2 — jmix:animate mixin applied, animation renders" timestamp="2026-05-21T11:54:09" tests="8" time="6.003" failures="0">
+    <testcase name="Animate — Basic render Step 2 — jmix:animate mixin applied, animation renders animate CSS rules are delivered (direct link or aggregated bundle)" time="5.330" classname="animate CSS rules are delivered (direct link or aggregated bundle)">
+    </testcase>
+    <testcase name="Animate — Basic render Step 2 — jmix:animate mixin applied, animation renders aggregated CSS bundle loads with 200 and contains animate.css rules" time="0.087" classname="aggregated CSS bundle loads with 200 and contains animate.css rules">
+    </testcase>
+    <testcase name="Animate — Basic render Step 2 — jmix:animate mixin applied, animation renders animation wrapper div exists in DOM" time="0.046" classname="animation wrapper div exists in DOM">
+    </testcase>
+    <testcase name="Animate — Basic render Step 2 — jmix:animate mixin applied, animation renders wrapper contains the rich text content" time="0.046" classname="wrapper contains the rich text content">
+    </testcase>
+    <testcase name="Animate — Basic render Step 2 — jmix:animate mixin applied, animation renders animation classes applied after IntersectionObserver fires" time="0.062" classname="animation classes applied after IntersectionObserver fires">
+    </testcase>
+    <testcase name="Animate — Basic render Step 2 — jmix:animate mixin applied, animation renders element visible after animation reveal" time="0.114" classname="element visible after animation reveal">
+    </testcase>
+    <testcase name="Animate — Basic render Step 2 — jmix:animate mixin applied, animation renders inert attribute removed after reveal" time="0.066" classname="inert attribute removed after reveal">
+    </testcase>
+    <testcase name="Animate — Basic render Step 2 — jmix:animate mixin applied, animation renders aria-hidden attribute removed after reveal" time="0.062" classname="aria-hidden attribute removed after reveal">
+    </testcase>
+  </testsuite>
+</testsuites>

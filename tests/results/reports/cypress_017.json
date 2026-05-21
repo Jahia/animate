@@ -1,0 +1,219 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 4,
+    "passes": 0,
+    "pending": 0,
+    "failures": 4,
+    "start": "2026-05-21T11:46:39.712Z",
+    "end": "2026-05-21T11:47:06.812Z",
+    "duration": 27100,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d87b19fa-8dc1-4e52-ba68-75196458ee09",
+      "title": "",
+      "fullFile": "cypress/e2e/03-animation-delay.cy.ts",
+      "file": "cypress/e2e/03-animation-delay.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c4c13059-3cc5-4442-9bb1-9eb4711aa138",
+          "title": "Animate — Delay modes",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "fcdc48ee-57a4-4ac3-9a6e-c2b66ce27719",
+              "title": "delayBeforeAnimation — CSS animationDelay applied",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "element reveals immediately (not after delay)",
+                  "fullTitle": "Animate — Delay modes delayBeforeAnimation — CSS animationDelay applied element reveals immediately (not after delay)",
+                  "timedOut": null,
+                  "duration": 8313,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\n// element should be visible without waiting for delay\ncy.get('[id^=\"animate-\"]', { timeout: 3000 }).should('be.visible');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 3000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 3000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/03-animation-delay.cy.ts:20:56)",
+                    "diff": null
+                  },
+                  "uuid": "4032ca17-f1a6-4720-b5e1-8d71bd5d79c6",
+                  "parentUUID": "fcdc48ee-57a4-4ac3-9a6e-c2b66ce27719",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "CSS animationDelay property is set on the element",
+                  "fullTitle": "Animate — Delay modes delayBeforeAnimation — CSS animationDelay applied CSS animationDelay property is set on the element",
+                  "timedOut": null,
+                  "duration": 3107,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]', { timeout: 3000 })\n    .should('have.css', 'animation-delay')\n    .and('match', /^[0-9.]+s$/);",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 3000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 3000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/03-animation-delay.cy.ts:26:17)",
+                    "diff": null
+                  },
+                  "uuid": "fb78af34-9e0c-4480-a494-ae203fda615e",
+                  "parentUUID": "fcdc48ee-57a4-4ac3-9a6e-c2b66ce27719",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "4032ca17-f1a6-4720-b5e1-8d71bd5d79c6",
+                "fb78af34-9e0c-4480-a494-ae203fda615e"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 11420,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "45c6680c-cb66-44ae-8f28-51ed14d266a8",
+              "title": "delayBeforeDisplay — setTimeout before reveal",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "element is hidden immediately after load",
+                  "fullTitle": "Animate — Delay modes delayBeforeDisplay — setTimeout before reveal element is hidden immediately after load",
+                  "timedOut": null,
+                  "duration": 9297,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\n// check immediately — before the 500ms setTimeout fires\ncy.get('[id^=\"animate-\"]').invoke('css', 'opacity').should('eq', '0');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/03-animation-delay.cy.ts:47:15)",
+                    "diff": null
+                  },
+                  "uuid": "ac75542b-eb68-4df2-b53b-a56ab83cdc5a",
+                  "parentUUID": "45c6680c-cb66-44ae-8f28-51ed14d266a8",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "element becomes visible after delay",
+                  "fullTitle": "Animate — Delay modes delayBeforeDisplay — setTimeout before reveal element becomes visible after delay",
+                  "timedOut": null,
+                  "duration": 3094,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]', { timeout: 3000 }).should('be.visible');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 3000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 3000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/03-animation-delay.cy.ts:52:56)",
+                    "diff": null
+                  },
+                  "uuid": "8d371788-d947-4055-94b2-402e99c39f82",
+                  "parentUUID": "45c6680c-cb66-44ae-8f28-51ed14d266a8",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "ac75542b-eb68-4df2-b53b-a56ab83cdc5a",
+                "8d371788-d947-4055-94b2-402e99c39f82"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 12391,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "cypress",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "./results/reports/",
+        "reportFilename": "cypress",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

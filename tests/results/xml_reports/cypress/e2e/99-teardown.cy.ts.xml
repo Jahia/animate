@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.521" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-05-21T11:55:39" tests="0" file="cypress/e2e/99-teardown.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Animate — Teardown" timestamp="2026-05-21T11:55:39" tests="1" time="0.516" failures="0">
+    <testcase name="Animate — Teardown deletes the test site" time="0.492" classname="deletes the test site">
+    </testcase>
+  </testsuite>
+</testsuites>

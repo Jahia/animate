@@ -1,0 +1,417 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 11,
+    "passes": 1,
+    "pending": 0,
+    "failures": 10,
+    "start": "2026-05-21T11:39:23.904Z",
+    "end": "2026-05-21T11:40:28.954Z",
+    "duration": 65050,
+    "testsRegistered": 11,
+    "passPercent": 9.090909090909092,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "132205d6-10b3-4a6e-8ded-e1584baec273",
+      "title": "",
+      "fullFile": "cypress/e2e/07-accessibility.cy.ts",
+      "file": "cypress/e2e/07-accessibility.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7c844b73-102b-488e-85a4-b5372589e51d",
+          "title": "Animate — Accessibility (WCAG 2.1 AA)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "4e5812ab-bca6-4cd2-80ae-2afc92ab9640",
+              "title": "Initial hidden state (before reveal)",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "wrapper starts with inert attribute (suppresses keyboard focus)",
+                  "fullTitle": "Animate — Accessibility (WCAG 2.1 AA) Initial hidden state (before reveal) wrapper starts with inert attribute (suppresses keyboard focus)",
+                  "timedOut": null,
+                  "duration": 4137,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "// Intercept to check DOM before IntersectionObserver fires\ncy.visit((0, animate_1.pageUrl)('test-page'), {\n    onBeforeLoad: function (win) {\n        // stub IntersectionObserver to never fire (check initial state)\n        win.IntersectionObserver = /** @class */ (function () {\n            function class_1() {\n            }\n            class_1.prototype.observe = function () { };\n            class_1.prototype.disconnect = function () { };\n            return class_1;\n        }());\n    }\n});\ncy.get('[id^=\"animate-\"]').should('have.attr', 'inert');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/07-accessibility.cy.ts:16:39)",
+                    "diff": null
+                  },
+                  "uuid": "1e345fcd-77c1-4ff0-b9fa-0eb117663e0c",
+                  "parentUUID": "4e5812ab-bca6-4cd2-80ae-2afc92ab9640",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "wrapper starts with aria-hidden=\"true\"",
+                  "fullTitle": "Animate — Accessibility (WCAG 2.1 AA) Initial hidden state (before reveal) wrapper starts with aria-hidden=\"true\"",
+                  "timedOut": null,
+                  "duration": 4080,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'), {\n    onBeforeLoad: function (win) {\n        win.IntersectionObserver = /** @class */ (function () {\n            function class_2() {\n            }\n            class_2.prototype.observe = function () { };\n            class_2.prototype.disconnect = function () { };\n            return class_2;\n        }());\n    }\n});\ncy.get('[id^=\"animate-\"]').should('have.attr', 'aria-hidden', 'true');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/07-accessibility.cy.ts:28:39)",
+                    "diff": null
+                  },
+                  "uuid": "c52cd5a6-3b8e-448b-955c-c41ef923a1ff",
+                  "parentUUID": "4e5812ab-bca6-4cd2-80ae-2afc92ab9640",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "wrapper starts with visibility:hidden",
+                  "fullTitle": "Animate — Accessibility (WCAG 2.1 AA) Initial hidden state (before reveal) wrapper starts with visibility:hidden",
+                  "timedOut": null,
+                  "duration": 4143,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'), {\n    onBeforeLoad: function (win) {\n        win.IntersectionObserver = /** @class */ (function () {\n            function class_3() {\n            }\n            class_3.prototype.observe = function () { };\n            class_3.prototype.disconnect = function () { };\n            return class_3;\n        }());\n    }\n});\ncy.get('[id^=\"animate-\"]').invoke('css', 'visibility').should('eq', 'hidden');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/07-accessibility.cy.ts:40:15)",
+                    "diff": null
+                  },
+                  "uuid": "d7f59094-aef3-4c83-a682-f6f6a0b659a9",
+                  "parentUUID": "4e5812ab-bca6-4cd2-80ae-2afc92ab9640",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "1e345fcd-77c1-4ff0-b9fa-0eb117663e0c",
+                "c52cd5a6-3b8e-448b-955c-c41ef923a1ff",
+                "d7f59094-aef3-4c83-a682-f6f6a0b659a9"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 12360,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "353fcbce-91b1-4ae8-a1e4-7d0cfc2d17fc",
+              "title": "Revealed state (after IntersectionObserver fires)",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "inert attribute absent after reveal",
+                  "fullTitle": "Animate — Accessibility (WCAG 2.1 AA) Revealed state (after IntersectionObserver fires) inert attribute absent after reveal",
+                  "timedOut": null,
+                  "duration": 10322,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]', { timeout: 5000 }).should('not.have.attr', 'inert');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/07-accessibility.cy.ts:55:56)",
+                    "diff": null
+                  },
+                  "uuid": "65159b8d-ae53-41aa-8ac0-9997bee8d26b",
+                  "parentUUID": "353fcbce-91b1-4ae8-a1e4-7d0cfc2d17fc",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "aria-hidden absent after reveal",
+                  "fullTitle": "Animate — Accessibility (WCAG 2.1 AA) Revealed state (after IntersectionObserver fires) aria-hidden absent after reveal",
+                  "timedOut": null,
+                  "duration": 5180,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]', { timeout: 5000 }).should('not.have.attr', 'aria-hidden');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/07-accessibility.cy.ts:60:56)",
+                    "diff": null
+                  },
+                  "uuid": "04c929e4-59d4-4b9f-b1ac-d34e7098100a",
+                  "parentUUID": "353fcbce-91b1-4ae8-a1e4-7d0cfc2d17fc",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "element is visible and reachable by keyboard after reveal",
+                  "fullTitle": "Animate — Accessibility (WCAG 2.1 AA) Revealed state (after IntersectionObserver fires) element is visible and reachable by keyboard after reveal",
+                  "timedOut": null,
+                  "duration": 5146,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]', { timeout: 5000 }).should('be.visible');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/07-accessibility.cy.ts:65:56)",
+                    "diff": null
+                  },
+                  "uuid": "0f87b9f2-8ab1-42ec-b1f9-b0ff32a5fe06",
+                  "parentUUID": "353fcbce-91b1-4ae8-a1e4-7d0cfc2d17fc",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "65159b8d-ae53-41aa-8ac0-9997bee8d26b",
+                "04c929e4-59d4-4b9f-b1ac-d34e7098100a",
+                "0f87b9f2-8ab1-42ec-b1f9-b0ff32a5fe06"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 20648,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "3e0172f1-4839-471e-b3e4-e22e41a35e96",
+              "title": "Pause button — WCAG 2.2.2 SC (looping animation)",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "pause button is keyboard focusable (is a native button)",
+                  "fullTitle": "Animate — Accessibility (WCAG 2.1 AA) Pause button — WCAG 2.2.2 SC (looping animation) pause button is keyboard focusable (is a native button)",
+                  "timedOut": null,
+                  "duration": 8356,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-pause-\"]', { timeout: 3000 })\n    .should('have.prop', 'tagName', 'BUTTON');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 3000ms: Expected to find element: `[id^=\"animate-pause-\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 3000ms: Expected to find element: `[id^=\"animate-pause-\"]`, but never found it.\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/07-accessibility.cy.ts:81:17)",
+                    "diff": null
+                  },
+                  "uuid": "557ef022-2bb4-4d10-a88b-1cb0afc99cd4",
+                  "parentUUID": "3e0172f1-4839-471e-b3e4-e22e41a35e96",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "pause button has aria-pressed attribute",
+                  "fullTitle": "Animate — Accessibility (WCAG 2.1 AA) Pause button — WCAG 2.2.2 SC (looping animation) pause button has aria-pressed attribute",
+                  "timedOut": null,
+                  "duration": 3140,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-pause-\"]', { timeout: 3000 })\n    .should('have.attr', 'aria-pressed');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 3000ms: Expected to find element: `[id^=\"animate-pause-\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 3000ms: Expected to find element: `[id^=\"animate-pause-\"]`, but never found it.\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/07-accessibility.cy.ts:87:17)",
+                    "diff": null
+                  },
+                  "uuid": "c0dd8734-1122-4922-934c-4d16083ea59c",
+                  "parentUUID": "3e0172f1-4839-471e-b3e4-e22e41a35e96",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "pause button label is meaningful (\"Pause animation\")",
+                  "fullTitle": "Animate — Accessibility (WCAG 2.1 AA) Pause button — WCAG 2.2.2 SC (looping animation) pause button label is meaningful (\"Pause animation\")",
+                  "timedOut": null,
+                  "duration": 3158,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-pause-\"]', { timeout: 3000 })\n    .invoke('text').should('match', /pause|resume/i);",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 3000ms: Expected to find element: `[id^=\"animate-pause-\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 3000ms: Expected to find element: `[id^=\"animate-pause-\"]`, but never found it.\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/07-accessibility.cy.ts:92:15)",
+                    "diff": null
+                  },
+                  "uuid": "e4b1dff1-0574-47a3-9d43-b9ff9d5e19d8",
+                  "parentUUID": "3e0172f1-4839-471e-b3e4-e22e41a35e96",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "557ef022-2bb4-4d10-a88b-1cb0afc99cd4",
+                "c0dd8734-1122-4922-934c-4d16083ea59c",
+                "e4b1dff1-0574-47a3-9d43-b9ff9d5e19d8"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 14654,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "5fc55802-b8e4-491c-a0eb-40c69d3b560d",
+              "title": "Exit animation — WCAG 2.4.3 (focus management)",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "element has aria-hidden=\"true\" after exit animation ends",
+                  "fullTitle": "Animate — Accessibility (WCAG 2.1 AA) Exit animation — WCAG 2.4.3 (focus management) element has aria-hidden=\"true\" after exit animation ends",
+                  "timedOut": null,
+                  "duration": 5360,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\n// wait for fadeOut animationend to fire\ncy.get('[id^=\"animate-\"]', { timeout: 5000 })\n    .should('have.attr', 'aria-hidden', 'true');",
+                  "err": {},
+                  "uuid": "d16481f5-2c1b-4bd3-b613-a570d1674e1b",
+                  "parentUUID": "5fc55802-b8e4-491c-a0eb-40c69d3b560d",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "element is hidden (display:none) after exit animation ends",
+                  "fullTitle": "Animate — Accessibility (WCAG 2.1 AA) Exit animation — WCAG 2.4.3 (focus management) element is hidden (display:none) after exit animation ends",
+                  "timedOut": null,
+                  "duration": 5140,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]', { timeout: 5000 })\n    .should('have.css', 'display', 'none');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 5000ms: expected '<div#animate-ffd023d7-96c2-4264-b8bc-fc5ae2671992.animated.headShake>' to have CSS property 'display' with the value 'none', but the value was 'block'",
+                    "estack": "AssertionError: Timed out retrying after 5000ms: expected '<div#animate-ffd023d7-96c2-4264-b8bc-fc5ae2671992.animated.headShake>' to have CSS property 'display' with the value 'none', but the value was 'block'\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/07-accessibility.cy.ts:123:17)",
+                    "diff": "- 'block'\n+ 'none'\n"
+                  },
+                  "uuid": "15a16a83-1d3b-4557-808a-d80ebaca1bff",
+                  "parentUUID": "5fc55802-b8e4-491c-a0eb-40c69d3b560d",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "d16481f5-2c1b-4bd3-b613-a570d1674e1b"
+              ],
+              "failures": [
+                "15a16a83-1d3b-4557-808a-d80ebaca1bff"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 10500,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "cypress",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "./results/reports/",
+        "reportFilename": "cypress",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

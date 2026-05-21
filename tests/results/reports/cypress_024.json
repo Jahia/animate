@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-21T11:54:55.553Z",
+    "end": "2026-05-21T11:55:02.225Z",
+    "duration": 6672,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "dfe056a3-c2b6-4749-87c2-c902ddf52c67",
+      "title": "",
+      "fullFile": "cypress/e2e/05-reduced-motion.cy.ts",
+      "file": "cypress/e2e/05-reduced-motion.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "74177c77-c860-4171-98e3-9dfe5e7fc7bd",
+          "title": "Animate — Reduced motion (WCAG 2.3.3 / 2.2.2)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "42e5dbd0-9082-43bf-87c8-a53db45b4111",
+              "title": "prefers-reduced-motion: reduce",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "element is revealed (visible) even with reduced motion",
+                  "fullTitle": "Animate — Reduced motion (WCAG 2.3.3 / 2.2.2) prefers-reduced-motion: reduce element is revealed (visible) even with reduced motion",
+                  "timedOut": null,
+                  "duration": 5331,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]', { timeout: 3000 }).should('be.visible');",
+                  "err": {},
+                  "uuid": "bcf55b46-b0b6-4fb2-8e19-3cc02e639d4e",
+                  "parentUUID": "42e5dbd0-9082-43bf-87c8-a53db45b4111",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "animation class \"animated\" is NOT added with reduced motion",
+                  "fullTitle": "Animate — Reduced motion (WCAG 2.3.3 / 2.2.2) prefers-reduced-motion: reduce animation class \"animated\" is NOT added with reduced motion",
+                  "timedOut": null,
+                  "duration": 590,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.wait(500);\ncy.get('[id^=\"animate-\"]').should('not.have.class', 'animated');",
+                  "err": {},
+                  "uuid": "b48e1cd6-67b0-4f1c-9a97-96cc240f6d55",
+                  "parentUUID": "42e5dbd0-9082-43bf-87c8-a53db45b4111",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "animation class \"fadeIn\" is NOT added with reduced motion",
+                  "fullTitle": "Animate — Reduced motion (WCAG 2.3.3 / 2.2.2) prefers-reduced-motion: reduce animation class \"fadeIn\" is NOT added with reduced motion",
+                  "timedOut": null,
+                  "duration": 557,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.wait(500);\ncy.get('[id^=\"animate-\"]').should('not.have.class', 'fadeIn');",
+                  "err": {},
+                  "uuid": "220733e4-b45e-4615-9476-3fa2bea0a822",
+                  "parentUUID": "42e5dbd0-9082-43bf-87c8-a53db45b4111",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "inert attribute removed even with reduced motion",
+                  "fullTitle": "Animate — Reduced motion (WCAG 2.3.3 / 2.2.2) prefers-reduced-motion: reduce inert attribute removed even with reduced motion",
+                  "timedOut": null,
+                  "duration": 66,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]', { timeout: 3000 }).should('not.have.attr', 'inert');",
+                  "err": {},
+                  "uuid": "33b514c9-06c5-4583-94d1-4661e0f80028",
+                  "parentUUID": "42e5dbd0-9082-43bf-87c8-a53db45b4111",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "bcf55b46-b0b6-4fb2-8e19-3cc02e639d4e",
+                "b48e1cd6-67b0-4f1c-9a97-96cc240f6d55",
+                "220733e4-b45e-4615-9476-3fa2bea0a822",
+                "33b514c9-06c5-4583-94d1-4661e0f80028"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 6544,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "cypress",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "./results/reports/",
+        "reportFilename": "cypress",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

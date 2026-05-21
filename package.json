@@ -1,0 +1,13 @@
+{
+  "name": "animate",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Fetches animate.css assets for packaging into the Jahia OSGi bundle.",
+  "dependencies": {
+    "animate.css": "4.1.1",
+    "clean-css": "5.3.3"
+  },
+  "scripts": {
+    "postinstall": "node copy-animate.js"
+  }
+}

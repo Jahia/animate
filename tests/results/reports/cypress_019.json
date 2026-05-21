@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-21T11:49:04.895Z",
+    "end": "2026-05-21T11:49:24.017Z",
+    "duration": 19122,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f3df96b6-9f63-48b8-90db-d991d04e0119",
+      "title": "",
+      "fullFile": "cypress/e2e/01-setup.cy.ts",
+      "file": "cypress/e2e/01-setup.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "486bcf06-38a3-4759-84ff-467686b20c60",
+          "title": "Animate — Setup",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "animate module is deployed and started",
+              "fullTitle": "Animate — Setup animate module is deployed and started",
+              "timedOut": null,
+              "duration": 19008,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.apollo({\n    queryFile: 'graphql/jcr/query/getStartedModulesVersion.graphql'\n}).then(function (resp) {\n    var _a, _b, _c;\n    var modules = (_c = (_b = (_a = resp === null || resp === void 0 ? void 0 : resp.data) === null || _a === void 0 ? void 0 : _a.dashboard) === null || _b === void 0 ? void 0 : _b.modules) !== null && _c !== void 0 ? _c : [];\n    var animate = modules.find(function (m) { return m.id === 'animate'; });\n    expect(animate, 'animate module not found — deploy the OSGi bundle first').to.exist;\n});",
+              "err": {},
+              "uuid": "78d1e161-8c3e-4e74-a4a7-b6c2d3346052",
+              "parentUUID": "486bcf06-38a3-4759-84ff-467686b20c60",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test-page is accessible in live mode",
+              "fullTitle": "Animate — Setup test-page is accessible in live mode",
+              "timedOut": null,
+              "duration": 29,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({ url: (0, animate_1.pageUrl)('test-page'), failOnStatusCode: false })\n    .its('status').should('eq', 200);",
+              "err": {},
+              "uuid": "20036043-1570-4944-a70c-a03cd400fe10",
+              "parentUUID": "486bcf06-38a3-4759-84ff-467686b20c60",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "rendered page contains a <body> element",
+              "fullTitle": "Animate — Setup rendered page contains a <body> element",
+              "timedOut": null,
+              "duration": 12,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request((0, animate_1.pageUrl)('test-page')).its('body').should('contain', '</body>');",
+              "err": {},
+              "uuid": "b6b6df16-c601-4555-b811-867507626cb0",
+              "parentUUID": "486bcf06-38a3-4759-84ff-467686b20c60",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "78d1e161-8c3e-4e74-a4a7-b6c2d3346052",
+            "20036043-1570-4944-a70c-a03cd400fe10",
+            "b6b6df16-c601-4555-b811-867507626cb0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 19049,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "cypress",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "./results/reports/",
+        "reportFilename": "cypress",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

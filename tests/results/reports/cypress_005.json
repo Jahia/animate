@@ -1,0 +1,272 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 8,
+    "passes": 0,
+    "pending": 0,
+    "failures": 8,
+    "start": "2026-05-21T11:36:42.187Z",
+    "end": "2026-05-21T11:37:20.574Z",
+    "duration": 38387,
+    "testsRegistered": 8,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8430c770-d5ac-47f5-84a8-94ae4e2d0832",
+      "title": "",
+      "fullFile": "cypress/e2e/02-animation-render.cy.ts",
+      "file": "cypress/e2e/02-animation-render.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4c4cde8d-b18e-4b8f-a59d-7ce6e3ebadaa",
+          "title": "Animate — Basic render",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "animate.min.css link tag is present",
+              "fullTitle": "Animate — Basic render animate.min.css link tag is present",
+              "timedOut": null,
+              "duration": 5281,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('link[href*=\"animate.min.css\"]').should('exist');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `link[href*=\"animate.min.css\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `link[href*=\"animate.min.css\"]`, but never found it.\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/02-animation-render.cy.ts:11:48)",
+                "diff": null
+              },
+              "uuid": "638f6a84-ef2a-4c66-81d0-75a35313e864",
+              "parentUUID": "4c4cde8d-b18e-4b8f-a59d-7ce6e3ebadaa",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "animate.min.css resource loads with 200",
+              "fullTitle": "Animate — Basic render animate.min.css resource loads with 200",
+              "timedOut": null,
+              "duration": 4083,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('link[href*=\"animate.min.css\"]').invoke('attr', 'href').then(function (href) {\n    cy.request(href).its('status').should('eq', 200);\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `link[href*=\"animate.min.css\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `link[href*=\"animate.min.css\"]`, but never found it.\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/02-animation-render.cy.ts:16:11)",
+                "diff": null
+              },
+              "uuid": "35fa8633-710b-4233-a7ab-4cc8cfe08049",
+              "parentUUID": "4c4cde8d-b18e-4b8f-a59d-7ce6e3ebadaa",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "wrapper div with animate- prefix exists in DOM",
+              "fullTitle": "Animate — Basic render wrapper div with animate- prefix exists in DOM",
+              "timedOut": null,
+              "duration": 4117,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]').should('exist');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/02-animation-render.cy.ts:23:35)",
+                "diff": null
+              },
+              "uuid": "479aa5bd-a18b-4a96-b61a-523a3c43d6cc",
+              "parentUUID": "4c4cde8d-b18e-4b8f-a59d-7ce6e3ebadaa",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "wrapper contains the text content",
+              "fullTitle": "Animate — Basic render wrapper contains the text content",
+              "timedOut": null,
+              "duration": 4122,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]').should('contain.text', 'Test animation content');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/02-animation-render.cy.ts:28:35)",
+                "diff": null
+              },
+              "uuid": "f22a09f7-51fa-4c77-98dc-338a494ac7ed",
+              "parentUUID": "4c4cde8d-b18e-4b8f-a59d-7ce6e3ebadaa",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "animation classes are applied after IntersectionObserver fires",
+              "fullTitle": "Animate — Basic render animation classes are applied after IntersectionObserver fires",
+              "timedOut": null,
+              "duration": 5142,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]', { timeout: 5000 }).should('have.class', 'animated');\ncy.get('[id^=\"animate-\"]').should('have.class', 'fadeIn');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/02-animation-render.cy.ts:33:52)",
+                "diff": null
+              },
+              "uuid": "ace5b22f-2558-474b-9f1f-61e08ca5cebe",
+              "parentUUID": "4c4cde8d-b18e-4b8f-a59d-7ce6e3ebadaa",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "element is visible after animation reveal",
+              "fullTitle": "Animate — Basic render element is visible after animation reveal",
+              "timedOut": null,
+              "duration": 5124,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]', { timeout: 5000 }).should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/02-animation-render.cy.ts:39:52)",
+                "diff": null
+              },
+              "uuid": "c25a07bc-df14-4227-ba64-186f3483d136",
+              "parentUUID": "4c4cde8d-b18e-4b8f-a59d-7ce6e3ebadaa",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "inert attribute removed after reveal",
+              "fullTitle": "Animate — Basic render inert attribute removed after reveal",
+              "timedOut": null,
+              "duration": 5127,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]', { timeout: 5000 }).should('not.have.attr', 'inert');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/02-animation-render.cy.ts:44:52)",
+                "diff": null
+              },
+              "uuid": "17bb2346-3d0e-4f27-a840-2ff6c5fdf02b",
+              "parentUUID": "4c4cde8d-b18e-4b8f-a59d-7ce6e3ebadaa",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "aria-hidden attribute removed after reveal",
+              "fullTitle": "Animate — Basic render aria-hidden attribute removed after reveal",
+              "timedOut": null,
+              "duration": 5141,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit((0, animate_1.pageUrl)('test-page'));\ncy.get('[id^=\"animate-\"]', { timeout: 5000 }).should('not.have.attr', 'aria-hidden');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `[id^=\"animate-\"]`, but never found it.\n    at Context.eval (webpack://animate-cypress/./cypress/e2e/02-animation-render.cy.ts:49:52)",
+                "diff": null
+              },
+              "uuid": "4c1d5ed2-9b88-4db3-a260-b3e9e36147fc",
+              "parentUUID": "4c4cde8d-b18e-4b8f-a59d-7ce6e3ebadaa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "638f6a84-ef2a-4c66-81d0-75a35313e864",
+            "35fa8633-710b-4233-a7ab-4cc8cfe08049",
+            "479aa5bd-a18b-4a96-b61a-523a3c43d6cc",
+            "f22a09f7-51fa-4c77-98dc-338a494ac7ed",
+            "ace5b22f-2558-474b-9f1f-61e08ca5cebe",
+            "c25a07bc-df14-4227-ba64-186f3483d136",
+            "17bb2346-3d0e-4f27-a840-2ff6c5fdf02b",
+            "4c1d5ed2-9b88-4db3-a260-b3e9e36147fc"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 38137,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "cypress",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "./results/reports/",
+        "reportFilename": "cypress",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
