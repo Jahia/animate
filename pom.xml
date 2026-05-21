@@ -18,9 +18,9 @@
   <name>animate</name>
   <description>This module allow fun CSS animations on your page.</description>
   <scm>
-    <connection>scm:git:git@github.com:pvollenweider/animate.git</connection>
-    <developerConnection>scm:git:git@github.com:pvollenweider/animate.git</developerConnection>
-    <url>https://github.com/pvollenweider/animate</url>
+    <connection>scm:git:git@github.com:Jahia/animate.git</connection>
+    <developerConnection>scm:git:git@github.com:Jahia/animate.git</developerConnection>
+    <url>https://github.com/Jahia/animate</url>
     <tag>HEAD</tag>
   </scm>
   <properties>

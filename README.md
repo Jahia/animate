@@ -49,7 +49,7 @@ Deploy the module JAR directly from the Jahia Store or the Jahia administration 
 ### Build from source
 
 ```bash
-git clone https://github.com/pvollenweider/animate.git
+git clone https://github.com/Jahia/animate.git
 cd animate
 mvn clean install
 ```
