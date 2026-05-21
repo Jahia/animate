@@ -12,6 +12,19 @@ A [Jahia](https://www.jahia.com) community module that adds scroll-triggered CSS
 - Zero jQuery dependency — vanilla JS only
 - Works as a skin on any content node that supports the `jmix:animate` mixin
 
+## Upgrading from 1.x
+
+> **Breaking change — full reinstall required.**
+>
+> The Maven `groupId` changed from `org.jahia.modules` to `org.jahia.community` in version 2.0.0. Jahia/OSGi treats these as two distinct bundles and cannot perform an in-place upgrade. Attempting to deploy 2.x over an existing 1.x installation will result in both bundles being active simultaneously, causing conflicts.
+>
+> **Migration steps:**
+> 1. In the Jahia administration panel (or via the Felix Web Console at `/tools`), **uninstall and delete** the existing `animate` 1.x bundle completely.
+> 2. Restart Jahia or wait for OSGi to settle.
+> 3. Install the 2.x bundle normally.
+>
+> JCR content (nodes with the `jmix:animate` mixin and their properties) is preserved — only the bundle needs to be replaced.
+
 ## Requirements
 
 | Requirement | Version |
