@@ -4,7 +4,48 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      maven-dependencies:
+        patterns:
+          - "*"
+    ignore:
+      # The Jahia parent/platform artifacts define the target Jahia version
+      - dependency-name: "org.jahia.*"
+      # frontend-maven-plugin 2.x requires a Java 17 Maven runtime
+      - dependency-name: "com.github.eirslett:frontend-maven-plugin"
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      npm-dependencies:
+        patterns:
+          - "*"
+  - package-ecosystem: "npm"
+    directory: "/tests"
+    schedule:
+      interval: "weekly"
+    groups:
+      npm-tests-dependencies:
+        patterns:
+          - "*"
+    ignore:
+      - dependency-name: "cypress"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@jahia/*"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@apollo/*"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "graphql"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "graphql-tag"
+        update-types: ["version-update:semver-major"]
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
