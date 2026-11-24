@@ -8,6 +8,10 @@
     "clean-css": "5.3.3"
   },
   "scripts": {
-    "postinstall": "node copy-animate.js"
+    "postinstall": "node copy-animate.js",
+    "sbom": "cyclonedx-npm --omit dev --spec-version 1.4 --output-file target/classes/javascript/cyclonedx/bom.json"
+  },
+  "devDependencies": {
+    "@cyclonedx/cyclonedx-npm": "^2.1.0"
   }
 }
