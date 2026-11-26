@@ -23,7 +23,7 @@ export const deployEmptyTemplates = () => {
         `--form "script=[{\\"installAndStartBundle\\":\\"empty-templates-1.0.0.jar\\",\\"forceUpdate\\":false}]" ` +
         `--form "file=@${jar}"`,
         {timeout: 60000}
-    ).its('code').should('eq', 0)
+    ).its('exitCode').should('eq', 0)
     cy.wait(3000)
 }
 
@@ -43,7 +43,7 @@ export const deployAnimateModule = () => {
         `--form "script=[{\\"installAndStartBundle\\":\\"$JARNAME\\",\\"forceUpdate\\":true,\\"uninstallPreviousVersion\\":true}]" ` +
         `--form "file=@$JAR"`,
         {timeout: 60000}
-    ).its('code').should('eq', 0)
+    ).its('exitCode').should('eq', 0)
     cy.wait(5000)
 }
 
